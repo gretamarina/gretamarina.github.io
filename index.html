@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greta Marina | Epilare Definitivă Laser — Beauty Hub Oradea</title>
+<meta name="description" content="Epilare definitivă cu laser diodă la Beauty Hub, Oradea. Programează-te la Greta Marina — rezultate vizibile din primele ședințe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Tenor+Sans&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --wine:#2b0b12;
+    --wine-deep:#1a060b;
+    --black:#0c0a0a;
+    --gold:#c8a15c;
+    --gold-soft:#e6cf9c;
+    --cream:#f6efe4;
+    --blush:#e7c7c2;
+    --text-soft:#e9ddce;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--text-soft);
+    font-family:'Tenor Sans', sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .script{
+    font-family:'Parisienne', cursive;
+    font-weight:400;
+  }
+  a{color:inherit; text-decoration:none;}
+  .container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.35em;
+    font-size:0.72rem;
+    color:var(--gold);
+  }
+
+  /* NAV */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    background:linear-gradient(180deg, rgba(12,10,10,0.9), transparent);
+    backdrop-filter:blur(2px);
+  }
+  nav .brand{ font-family:'Parisienne',cursive; font-size:1.5rem; color:var(--gold-soft); }
+  nav .links{ display:flex; gap:28px; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase;}
+  nav .links a{ opacity:0.85; transition:opacity .25s;}
+  nav .links a:hover{ opacity:1; color:var(--gold);}
+  .nav-cta{
+    border:1px solid var(--gold);
+    padding:8px 18px;
+    border-radius:2px;
+    font-size:0.8rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+  }
+  .nav-cta:hover{ background:var(--gold); color:var(--black); }
+  .menu-toggle{ display:none; }
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex; align-items:center;
+    position:relative;
+    background:
+      radial-gradient(ellipse 80% 60% at 75% 20%, rgba(200,161,92,0.16), transparent 60%),
+      linear-gradient(120deg, var(--wine-deep) 0%, var(--wine) 45%, var(--black) 100%);
+    padding:140px 0 80px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(200,161,92,0.05) 0px, rgba(200,161,92,0.05) 1px, transparent 1px, transparent 90px);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .hero h1{
+    font-size:4.2rem;
+    color:var(--cream);
+    line-height:1.02;
+    margin:10px 0 22px;
+  }
+  .hero h1 .script{
+    display:block;
+    font-size:2.6rem;
+    color:var(--gold-soft);
+    margin-bottom:4px;
+  }
+  .hero p.lead{
+    font-size:1.1rem;
+    max-width:440px;
+    color:var(--text-soft);
+    opacity:0.9;
+    margin-bottom:34px;
+  }
+  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; }
+  .btn{
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:2px;
+    font-size:0.85rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    transition:all .25s;
+    cursor:pointer;
+    border:1px solid var(--gold);
+  }
+  .btn-solid{ background:var(--gold); color:var(--black); }
+  .btn-solid:hover{ background:var(--gold-soft); }
+  .btn-outline{ color:var(--cream); }
+  .btn-outline:hover{ background:rgba(200,161,92,0.12); }
+
+  .hero-badge{
+    justify-self:end;
+    width:230px; height:230px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    position:relative;
+  }
+  .hero-badge::before{
+    content:"";
+    position:absolute; inset:14px;
+    border:1px solid rgba(200,161,92,0.4);
+    border-radius:50%;
+  }
+  .hero-badge p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.15rem;
+    color:var(--gold-soft);
+    line-height:1.4;
+    padding:0 30px;
+  }
+
+  .marquee-strip{
+    border-top:1px solid rgba(200,161,92,0.25);
+    border-bottom:1px solid rgba(200,161,92,0.25);
+    background:var(--wine-deep);
+    padding:16px 0;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .marquee-strip span{
+    display:inline-block;
+    font-size:0.8rem;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    padding:0 28px;
+    opacity:0.85;
+  }
+
+  /* SECTION GENERIC */
+  section{ padding:100px 0; position:relative; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 56px; }
+  .section-head h2{ font-size:2.6rem; color:var(--cream); margin-top:8px; }
+  .section-head p{ opacity:0.8; margin-top:14px; }
+
+  /* ABOUT / WHY */
+  .why{ background:var(--black); }
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:36px;
+  }
+  .why-card{
+    border:1px solid rgba(200,161,92,0.25);
+    padding:34px 28px;
+    text-align:left;
+    transition:border-color .25s, transform .25s;
+  }
+  .why-card:hover{ border-color:var(--gold); transform:translateY(-4px); }
+  .why-card .num{ font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gold); letter-spacing:0.15em;}
+  .why-card h3{ font-size:1.5rem; color:var(--cream); margin:12px 0 10px; }
+  .why-card p{ font-size:0.92rem; opacity:0.8; }
+
+  /* PRICING */
+  .pricing{
+    background:linear-gradient(180deg, var(--wine-deep), var(--black));
+  }
+  .pricing-tabs{
+    display:flex; justify-content:center; gap:10px; margin-bottom:50px;
+  }
+  .tab-btn{
+    padding:10px 26px;
+    border:1px solid var(--gold);
+    font-size:0.8rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    background:transparent;
+    color:var(--text-soft);
+    cursor:pointer;
+    transition:all .2s;
+  }
+  .tab-btn.active{ background:var(--gold); color:var(--black); }
+
+  .pricing-panel{ display:none; }
+  .pricing-panel.active{ display:block; }
+
+  .price-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  .price-cards.two{ grid-template-columns:repeat(2,1fr); max-width:720px; margin:0 auto; }
+  .price-card{
+    background:rgba(246,239,228,0.03);
+    border:1px solid rgba(200,161,92,0.3);
+    padding:38px 26px;
+    text-align:center;
+    position:relative;
+  }
+  .price-card.featured{
+    border-color:var(--gold);
+    background:rgba(200,161,92,0.07);
+  }
+  .price-card.featured::before{
+    content:"CEL MAI ALES";
+    position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+    background:var(--gold); color:var(--black);
+    font-size:0.65rem; letter-spacing:0.15em;
+    padding:5px 14px;
+  }
+  .price-card .zones{ font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gold-soft); text-transform:uppercase; letter-spacing:0.1em;}
+  .price-card .amount{ font-family:'Cormorant Garamond',serif; font-size:3.4rem; color:var(--cream); margin:14px 0 0; }
+  .price-card .amount sub{ font-size:1rem; color:var(--gold-soft); }
+  .price-card .desc{ font-size:0.85rem; opacity:0.75; margin-top:6px; }
+
+  .zone-list{
+    margin-top:50px;
+    border:1px solid rgba(200,161,92,0.2);
+    padding:34px 40px;
+  }
+  .zone-list h4{ font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--gold-soft); margin-bottom:18px; }
+  .zone-list ul{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px 20px;
+    font-size:0.9rem;
+  }
+  .zone-list li::before{ content:"✦ "; color:var(--gold); }
+
+  /* ABOUT LASER INFO */
+  .info{ background:var(--black); }
+  .info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:start;
+  }
+  .info-grid h3{ font-size:1.7rem; color:var(--gold-soft); margin-bottom:14px; }
+  .info-grid p{ opacity:0.85; font-size:0.95rem; margin-bottom:16px; }
+  .faq-item{ border-bottom:1px solid rgba(200,161,92,0.2); padding:18px 0; }
+  .faq-item h4{ font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--cream); margin-bottom:6px; }
+  .faq-item p{ font-size:0.9rem; opacity:0.75; }
+
+  /* BOOKING */
+  .booking{
+    background:linear-gradient(120deg, var(--wine) 0%, var(--wine-deep) 100%);
+    position:relative;
+  }
+  .booking-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .booking-copy h2{ font-size:2.6rem; color:var(--cream); margin-bottom:16px; }
+  .booking-copy p{ opacity:0.85; margin-bottom:22px; }
+  .booking-copy .contact-line{ display:flex; align-items:center; gap:12px; margin-bottom:14px; font-size:0.95rem;}
+  .booking-copy .contact-line strong{ color:var(--gold-soft); }
+
+  form.book-form{
+    background:rgba(12,10,10,0.55);
+    border:1px solid rgba(200,161,92,0.35);
+    padding:36px;
+  }
+  .book-form label{
+    display:block;
+    font-size:0.75rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    margin-bottom:6px;
+  }
+  .book-form .field{ margin-bottom:18px; }
+  .book-form input, .book-form select{
+    width:100%;
+    padding:12px 14px;
+    background:rgba(246,239,228,0.05);
+    border:1px solid rgba(200,161,92,0.3);
+    color:var(--cream);
+    font-family:'Tenor Sans',sans-serif;
+    font-size:0.95rem;
+  }
+  .book-form input:focus, .book-form select:focus{
+    outline:none; border-color:var(--gold);
+  }
+  .book-form .row2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .book-form button{
+    width:100%;
+    padding:15px;
+    background:var(--gold);
+    border:none;
+    color:var(--black);
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    cursor:pointer;
+    transition:background .2s;
+    font-family:'Tenor Sans',sans-serif;
+  }
+  .book-form button:hover{ background:var(--gold-soft); }
+  .form-note{ font-size:0.78rem; opacity:0.65; margin-top:12px; text-align:center; }
+
+  /* FOOTER */
+  footer{
+    background:var(--black);
+    border-top:1px solid rgba(200,161,92,0.25);
+    padding:56px 0 30px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:40px;
+  }
+  footer .brand{ font-family:'Parisienne',cursive; font-size:2rem; color:var(--gold-soft); margin-bottom:10px; display:block;}
+  footer p{ font-size:0.88rem; opacity:0.75; }
+  footer h5{ font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;}
+  footer .flink{ display:block; font-size:0.9rem; opacity:0.85; margin-bottom:8px; }
+  footer .flink:hover{ color:var(--gold-soft); }
+  .footer-bottom{
+    text-align:center;
+    font-size:0.78rem;
+    opacity:0.55;
+    border-top:1px solid rgba(200,161,92,0.12);
+    padding-top:22px;
+  }
+
+  .whatsapp-float{
+    position:fixed;
+    bottom:26px; right:26px;
+    z-index:200;
+    background:var(--gold);
+    color:var(--black);
+    width:56px; height:56px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    transition:transform .2s;
+  }
+  .whatsapp-float:hover{ transform:scale(1.08); }
+
+  @media (max-width:880px){
+    nav .links{ display:none; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-badge{ justify-self:center; margin-top:20px; }
+    .hero h1{ font-size:2.8rem; }
+    .hero h1 .script{ font-size:2rem; }
+    .why-grid{ grid-template-columns:1fr; }
+    .price-cards, .price-cards.two{ grid-template-columns:1fr; }
+    .info-grid{ grid-template-columns:1fr; }
+    .zone-list ul{ grid-template-columns:1fr 1fr; }
+    .booking-grid{ grid-template-columns:1fr; }
+    .book-form .row2{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr; gap:26px; }
+    section{ padding:70px 0; }
+    .section-head h2{ font-size:2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="brand">Greta Marina</a>
+  <div class="links">
+    <a href="#servicii">Servicii</a>
+    <a href="#femei">Prețuri Femei</a>
+    <a href="#barbati">Prețuri Bărbați</a>
+    <a href="#despre">Despre Laser</a>
+    <a href="#programare">Programare</a>
+  </div>
+  <a class="nav-cta" href="#programare">Programează-te</a>
+</nav>
+
+<header id="top" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Beauty Hub · Oradea</p>
+      <h1><span class="script">Epilare</span>Definitivă</h1>
+      <p class="lead">Mai mult decât o epilare — o investiție în confortul tău. Tehnologie laser diodă, rezultate vizibile din primele ședințe, la Greta Marina.</p>
+      <div class="hero-ctas">
+        <a href="#programare" class="btn btn-solid">Rezervă o ședință</a>
+        <a href="#femei" class="btn btn-outline">Vezi prețurile</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <p>Piele netedă.<br>Încredere maximă.</p>
+    </div>
+  </div>
+</header>
+
+<div class="marquee-strip">
+  <span>✦ Tehnologie laser diodă</span>
+  <span>✦ Sigur și eficient</span>
+  <span>✦ Pentru toate tipurile de piele</span>
+  <span>✦ Programare ușor pe WhatsApp</span>
+  <span>✦ Locurile sunt limitate</span>
+  <span>✦ Beauty Hub, Oradea</span>
+</div>
+
+<section class="why" id="servicii">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">De ce laser diodă</p>
+      <h2>Mai mult decât o epilare</h2>
+      <p>O investiție în confortul tău, pe termen lung.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="num">✦</div>
+        <h3>Fără iritații</h3>
+        <p>Fără foliculită sau iritațiile pe care le lasă lama, ceara sau alte metode clasice.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">✦</div>
+        <h3>Piele mai fină</h3>
+        <p>Pori micșorați, piele mai uniformă la atingere, vizibil de la primele ședințe.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">✦</div>
+        <h3>Economisești timp</h3>
+        <p>Scapi de stresul epilării frecvente și de programările repetate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="preturi">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Pachete și prețuri</p>
+      <h2>Epilare Definitivă Laser</h2>
+      <p>Alege pachetul potrivit pentru tine.</p>
+    </div>
+
+    <div class="pricing-tabs">
+      <button class="tab-btn active" data-tab="femei">Femei</button>
+      <button class="tab-btn" data-tab="barbati">Bărbați</button>
+    </div>
+
+    <div class="pricing-panel active" id="femei">
+      <div class="price-cards">
+        <div class="price-card featured">
+          <div class="zones">Full Body · 16 zone la alegere</div>
+          <div class="amount">350<sub> lei</sub></div>
+          <div class="desc">Pachetul complet, zonele la alegere.</div>
+        </div>
+        <div class="price-card">
+          <div class="zones">8 zone la alegere</div>
+          <div class="amount">250<sub> lei</sub></div>
+        </div>
+        <div class="price-card">
+          <div class="zones">4 zone la alegere</div>
+          <div class="amount">200<sub> lei</sub></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-panel" id="barbati">
+      <div class="price-cards two">
+        <div class="price-card featured">
+          <div class="zones">Full Body · 14 zone</div>
+          <div class="amount">500<sub> lei</sub></div>
+          <div class="desc">Pachet complet</div>
+        </div>
+        <div class="price-card">
+          <div class="zones">4 zone la alegere</div>
+          <div class="amount">350<sub> lei</sub></div>
+        </div>
+      </div>
+      <div class="zone-list">
+        <h4>Zone incluse</h4>
+        <ul>
+          <li>Braț superior</li>
+          <li>Braț inferior</li>
+          <li>Dosul palmei</li>
+          <li>Degete mâini</li>
+          <li>Umeri</li>
+          <li>Axilă</li>
+          <li>Piept</li>
+          <li>Abdomen</li>
+          <li>Picior superior</li>
+          <li>Picior inferior</li>
+          <li>Laba piciorului</li>
+          <li>Degete picioare</li>
+          <li>Omoplați</li>
+          <li>Lombar</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="form-note" style="margin-top:36px;">Locurile sunt limitate — rezervă-ți ședința din timp.</p>
+  </div>
+</section>
+
+<section class="info" id="despre">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Despre tratament</p>
+      <h2>Epilarea cu laser diodă</h2>
+    </div>
+    <div class="info-grid">
+      <div>
+        <h3>Cum funcționează</h3>
+        <p>Laserul diodă emite un fascicul de lumină absorbit de melanina din firul de păr. Căldura generată afectează folicul pilos, reducând treptat și durabil capacitatea firului de a mai crește.</p>
+        <p>Este o tehnologie sigură și eficientă, potrivită pentru toate tipurile de piele, iar rezultatele devin vizibile încă din primele ședințe.</p>
+        <h3 style="margin-top:30px;">Pentru cine este potrivită</h3>
+        <p>Epilarea definitivă cu laser diodă este recomandată atât femeilor, cât și bărbaților care își doresc o piele netedă, fără disconfortul epilării cu lama sau ceara, pe termen lung.</p>
+      </div>
+      <div>
+        <div class="faq-item">
+          <h4>Câte ședințe sunt necesare?</h4>
+          <p>Numărul ședințelor variază în funcție de zonă, tipul de păr și piele — se stabilește individual la prima programare.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Este dureros?</h4>
+          <p>Tehnologia laser diodă este concepută pentru un disconfort minim, mult mai blândă comparativ cu metodele clasice.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Cum mă pregătesc?</h4>
+          <p>Se recomandă evitarea expunerii la soare și epilarea cu lama (nu smulgere) înainte de ședință. Detaliile complete se discută la programare.</p>
+        </div>
+        <div class="faq-item" style="border-bottom:none;">
+          <h4>Cum mă programez?</h4>
+          <p>Simplu, prin formularul de mai jos sau direct pe WhatsApp la 0741 951 573.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="programare">
+  <div class="container booking-grid">
+    <div class="booking-copy">
+      <p class="eyebrow">Programează-te</p>
+      <h2>Rezervă-ți ședința</h2>
+      <p>Completează formularul și te contactăm pe WhatsApp pentru confirmare, sau scrie-ne direct.</p>
+      <div class="contact-line">📍 <span><strong>Beauty Hub</strong> — Strada Nojoridului nr. 11, Oradea</span></div>
+      <div class="contact-line">📞 <strong>Greta Marina</strong> — 0741 951 573</div>
+      <div class="contact-line">📘 Facebook — <span>greta.marina</span></div>
+    </div>
+
+    <form class="book-form" id="bookForm">
+      <div class="field">
+        <label for="name">Nume și prenume</label>
+        <input type="text" id="name" required placeholder="Numele tău">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" required placeholder="07xx xxx xxx">
+        </div>
+        <div class="field">
+          <label for="date">Data dorită</label>
+          <input type="date" id="date">
+        </div>
+      </div>
+      <div class="field">
+        <label for="service">Pachet dorit</label>
+        <select id="service">
+          <option>Femei — Full Body 16 zone (350 lei)</option>
+          <option>Femei — 8 zone (250 lei)</option>
+          <option>Femei — 4 zone (200 lei)</option>
+          <option>Bărbați — Full Body 14 zone (500 lei)</option>
+          <option>Bărbați — 4 zone (350 lei)</option>
+          <option>Nu știu încă, vreau detalii</option>
+        </select>
+      </div>
+      <button type="submit">Trimite pe WhatsApp</button>
+      <p class="form-note">Vei fi redirecționat/ă către WhatsApp cu mesajul precompletat.</p>
+    </form>
+  </div>
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/40741951573" target="_blank" aria-label="Scrie pe WhatsApp" title="Scrie pe WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#0c0a0a"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.87 11.87L4 20l4.24-1.11a7.9 7.9 0 0 0 3.8.97h0a7.94 7.94 0 0 0 5.56-13.54zM12.05 18.4a6.58 6.58 0 0 1-3.36-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.6 6.6 0 1 1 5.59 3.09zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.5.64-.61.77-.23.15-.42.05a5.4 5.4 0 0 1-1.59-.98 5.9 5.9 0 0 1-1.1-1.36c-.11-.2 0-.3.09-.4s.2-.23.29-.35a1.3 1.3 0 0 0 .2-.33.36.36 0 0 0 0-.35c-.05-.1-.44-1.06-.6-1.45s-.32-.33-.44-.33-.24 0-.37 0a.71.71 0 0 0-.51.24 2.16 2.16 0 0 0-.67 1.6 3.75 3.75 0 0 0 .79 1.99 8.6 8.6 0 0 0 3.3 2.92c.46.2.82.32 1.1.41a2.65 2.65 0 0 0 1.22.08 2 2 0 0 0 1.31-.92 1.62 1.62 0 0 0 .11-.92c-.05-.08-.18-.13-.38-.23z"/></svg>
+</a>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="brand">Greta Marina</span>
+        <p>Epilare definitivă cu laser diodă la Beauty Hub, Oradea. Piele netedă, încredere maximă.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a class="flink" href="tel:0741951573">0741 951 573</a>
+        <a class="flink" href="https://facebook.com/greta.marina" target="_blank">facebook.com/greta.marina</a>
+        <a class="flink" href="https://wa.me/40741951573" target="_blank">Scrie pe WhatsApp</a>
+      </div>
+      <div>
+        <h5>Locație</h5>
+        <p>Beauty Hub<br>Strada Nojoridului nr. 11<br>Oradea</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Greta Marina — Beauty Hub. Toate drepturile rezervate.</div>
+  </div>
+</footer>
+
+<script>
+  // Pricing tabs
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.pricing-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Booking form -> WhatsApp
+  document.getElementById('bookForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const date = document.getElementById('date').value;
+    const service = document.getElementById('service').value;
+    let msg = `Bună! Aș dori o programare la Beauty Hub.%0A`;
+    msg += `Nume: ${name}%0A`;
+    msg += `Telefon: ${phone}%0A`;
+    if(date) msg += `Data dorită: ${date}%0A`;
+    msg += `Pachet: ${service}`;
+    window.open(`https://wa.me/40741951573?text=${msg}`, '_blank');
+  });
+</script>
+
+</body>
+</html>
