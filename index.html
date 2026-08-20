@@ -82,6 +82,30 @@
       radial-gradient(ellipse 80% 60% at 75% 20%, rgba(200,161,92,0.16), transparent 60%),
       linear-gradient(120deg, var(--wine-deep) 0%, var(--wine) 45%, var(--black) 100%);
     padding:140px 0 80px;
+    overflow:hidden;
+  }
+  .hero-photo-wrap{
+    position:relative;
+    justify-self:end;
+    width:100%;
+    max-width:420px;
+  }
+  .hero-photo-wrap img{
+    width:100%;
+    display:block;
+    border-radius:2px;
+    box-shadow:0 30px 70px rgba(0,0,0,0.55);
+    border:1px solid rgba(200,161,92,0.4);
+  }
+  .hero-photo-caption{
+    position:absolute;
+    bottom:-18px; left:-18px;
+    background:var(--black);
+    border:1px solid var(--gold);
+    padding:12px 22px;
+    font-family:'Cormorant Garamond',serif;
+    color:var(--gold-soft);
+    font-size:1.05rem;
   }
   .hero::before{
     content:"";
@@ -228,6 +252,12 @@
     gap:28px;
   }
   .price-cards.two{ grid-template-columns:repeat(2,1fr); max-width:720px; margin:0 auto; }
+  .men-photo{
+    max-width:280px;
+    margin:0 auto 40px;
+    border:1px solid rgba(200,161,92,0.35);
+  }
+  .men-photo img{ width:100%; display:block; }
   .price-card{
     background:rgba(246,239,228,0.03);
     border:1px solid rgba(200,161,92,0.3);
@@ -421,8 +451,9 @@
         <a href="#femei" class="btn btn-outline">Vezi prețurile</a>
       </div>
     </div>
-    <div class="hero-badge">
-      <p>Piele netedă.<br>Încredere maximă.</p>
+    <div class="hero-photo-wrap">
+      <img src="greta-marina.jpg" alt="Greta Marina, specialist epilare definitivă laser">
+      <div class="hero-photo-caption">Greta Marina<br><span style="font-family:'Tenor Sans',sans-serif; font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; opacity:0.85;">Epilare Definitivă</span></div>
     </div>
   </div>
 </header>
@@ -495,6 +526,9 @@
     </div>
 
     <div class="pricing-panel" id="barbati">
+      <div class="men-photo">
+        <img src="epilare-barbati.jpg" alt="Epilare definitivă laser pentru bărbați">
+      </div>
       <div class="price-cards two">
         <div class="price-card featured">
           <div class="zones">Full Body · 14 zone</div>
